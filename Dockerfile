@@ -22,7 +22,7 @@ WORKDIR "${ELASTALERT_HOME}"
 # With the latest hash we no longer need to monkey with package versions
 RUN python3 setup.py install
 
-FROM node:alpine
+FROM node:23.11.1-alpine3.21
 LABEL maintainer="BitSensor <dev@bitsensor.io>"
 # Set timezone for this container
 ENV TZ Etc/UTC
